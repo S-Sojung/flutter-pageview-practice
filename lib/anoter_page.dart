@@ -18,8 +18,19 @@ class AnotherPage extends StatelessWidget {
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(color: Colors.red[200], height: 200),
+              ClipRRect(
+                // borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
+                borderRadius: BorderRadius.vertical(bottom: Radius.circular(40)),
+                child: UserAccountsDrawerHeader(
+                  // margin: EdgeInsets.only(bottom: 0),
+                  accountName: Text("이름"),
+                  accountEmail: Text("개인정보"),
+                  decoration: BoxDecoration(
+                    color: Colors.redAccent,
 
+                  ),
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
