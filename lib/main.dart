@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pageview_app/anoter_page.dart';
 import 'package:pageview_app/other_page.dart';
+import 'package:pageview_app/teacher_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,12 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => AnotherPage())
               );
             }, icon: Icon(Icons.account_box_rounded)),
+            IconButton(onPressed: (){
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TeacherPage())
+              );
+            }, icon: Icon(Icons.star)),
             IconButton(onPressed: (){
               Navigator.push(
                   context,
